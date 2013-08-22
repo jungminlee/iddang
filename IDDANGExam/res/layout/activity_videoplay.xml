@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/aa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.example.iddangexam.video.MyVideoView
+            android:id="@+id/videoView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/video_command"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/videocommand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#77ffffff"
+                android:minHeight="40dip" >
+
+                <Button
+                    android:id="@+id/video_btn_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/video_btn_play"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/video_btn_endpoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/video_btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/video_btn_endpoint"
+                    android:text="Button" />
+
+                <Button
+                    android:id="@+id/video_btn_startpoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Button" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_progressarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#77ffffff" >
+
+                <SeekBar
+                    android:id="@+id/video_seekbar"
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/video_text_endtime"
+                    android:layout_toRightOf="@+id/video_text_currenttime"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/video_text_currenttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="#ff000000"
+                    android:width="60dp" />
+
+                <TextView
+                    android:id="@+id/video_text_endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="#ff000000"
+                    android:width="60dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>
